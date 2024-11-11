@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Last Frame Image</title>
+    <style>
+        /* Ensure the video and image are centered */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-container">
+    <!-- Video element that will autoplay and hide when ended -->
+    <video id="myVideo" autoplay muted playsinline>
+        <source src="images/Sin título.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Image that will be shown when video ends, initially hidden -->
+    <img id="lastFrame" src="images/banner.png" alt="Last Frame" style="display: none;">
+</div>
+
+<script>
+    // Get the video and image elements
+    const video = document.getElementById('myVideo');
+    const lastFrameImage = document.getElementById('lastFrame');
+
+    // Listen for when the video ends
+    video.addEventListener('ended', () => {
+        // Hide the video and show the last frame image
+        video.style.display = 'none';
+        lastFrameImage.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

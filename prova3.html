@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Shirt Customizer</title>
+    <style>
+        .body {
+	  margin: 0;
+}
+    </style>
+</head>
+<body>
+    <div id="displayText"></div>
+    <div class="button-container">
+        <button id="enable-controls" class="active">Enable Controls (X)</button>
+        <button id="disable-controls">Disable Controls (Y)</button>
+        <input type="file" id="image-upload" multiple accept="image/png" />
+        <select id="imageSelector"></select>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>    
+    <script src="src/assets/OrbitControls.js"></script>
+    <script src="src/assets/OBJLoader.js"></script>
+    <!-- <script src="src/assets/OBJExporter.js"></script> -->
+    <script src="https://threejs.org/examples/js/geometries/DecalGeometry.js"></script>
+
+    <script type= module src="app3.js"></script>
+</body>
+</html>
